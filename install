@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+BASE_DIR=~/.vim
+BUNDLE_DIR=$BASE_DIR/bundle
+VUNDLE_RC=$BASE_DIR/config/module/vundle.vim
+
+if [[ ! -d $BUNDLE_DIR ]]; then
+    echo "Creating bundle directory..."
+    mkdir -p $BUNDLE_DIR
+fi
+
+echo "Clearing bundle directory..."
+rm -rf $BUNDLE_DIR/*
+
+echo "Installing Vundle..."
+git clone https://github.com/VundleVim/Vundle.vim.git $BUNDLE_DIR/Vundle.vim
+
+echo "Installing plugins..."
+vim -u $VUNDLE_RC +PluginInstall +qa
