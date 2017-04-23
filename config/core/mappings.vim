@@ -24,10 +24,15 @@ nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>= :wincmd =<CR>
 
-noremap <silent> <C-left> :bprev<CR>
-noremap <silent> <C-h> :bprev<CR>
-noremap <silent> <C-right> :bnext<CR>
-noremap <silent> <C-l> :bnext<CR>
+nnoremap <silent> <A-Up> :wincmd k<CR>
+nnoremap <silent> <A-Down> :wincmd j<CR>
+nnoremap <silent> <A-Left> :wincmd h<CR>
+nnoremap <silent> <A-Right> :wincmd l<CR>
+
+nnoremap <silent> <C-Left> :bprev<CR>
+nnoremap <silent> <C-h> :bprev<CR>
+nnoremap <silent> <C-Right> :bnext<CR>
+nnoremap <silent> <C-l> :bnext<CR>
 
 nnoremap <silent> <Leader>q :Bclose<CR>
 nnoremap <silent> <Leader>Q <C-w>c
